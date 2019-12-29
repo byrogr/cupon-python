@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{% block title %}{% endblock %} | Cupon</title>
+    {% block styles %}
+        <link href="{{ url_for('static', filename='css/normalizar.css') }}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='css/comun.css') }}" rel="stylesheet" />
+    {% endblock %}
+
+    {% block scripts %}
+        <!--[if lt IE 9]>
+        <script src="{{ url_for('static', filename="js/html5.js") }}"></script>
+        <![endif]-->
+    {% endblock %}
+</head>
+<body id="{% block id %}{% endblock %}">
+    <div id="contenedor">
+        {% block body %}{% endblock %}
+        <footer>
+            &copy; 2019 - Cupon
+            <a href="#">Ayuda</a>
+            <a href="#">Contacto</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Sobre nosotros</a>
+        </footer>
+    </div>
+</body>
+</html>
