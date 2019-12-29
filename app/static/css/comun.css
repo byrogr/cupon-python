@@ -252,7 +252,7 @@ a:active  { position: relative; top: 1px; }
    ======================================================================== */
 #contenedor {
     background: #FFF;
-    margin: 0 auto 1em;
+    margin: 1em auto;
     width: 960px;
 
     -moz-box-shadow: 0 1px 5px #444;
