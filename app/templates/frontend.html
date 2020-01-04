@@ -23,10 +23,18 @@
             </ul>
         </nav>
     </header>
-    <article>
+    <article class="oferta">
         {% block article %}{% endblock %}
     </article>
     <aside>
-        {% block aside %}{% endblock %}
+        {% block aside %}
+            {% block registrate %}
+                <a id="registrate" class="boton" href="#">Regístrate</a>
+            {% endblock %}
+
+            <section id="login">
+                {# Formulario Login #}
+            </section>
+        {% endblock %}
     </aside>
 {% endblock %}

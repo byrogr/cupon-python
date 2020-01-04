@@ -1,11 +1,18 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from .config import Config
 
-from .public import public
 
+db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
+
+    db.init_app(app)
+
+    # Registros de Blueprints
+    from .public import public
     app.register_blueprint(public)
+
     return app
